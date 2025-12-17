@@ -1,0 +1,23 @@
+#!/bin/sh
+
+#NOTE : Jalankan Di Termux Dengan Perintah $ chmod +x install.sh && ./install.sh
+echo "#########################"
+echo "## AUTO INSTALL CHROOT KALI"
+echo "#########################"
+pkg update && pkg upgrade -yy
+
+pkg  install wget proot-distro git tsu root-repo
+
+proot-distro instal kali
+
+proot-distro login kali
+
+rm -rf /var/lib/dpkg/info/postgresql*
+
+apt update && apt upgrade -yy
+
+
+apt install git clang gcc cmake ccache automake flex lzop bison gperf build-essential zip curl zlib1g-dev libxml2-utils bzip2 libbz2-dev libbz2-1.0 libghc-bzlib-dev squashfs-tools pngcrush schedtool dpkg-dev make optipng maven libssl-dev pwgen libswitch-perl policycoreutils minicom libxml-sax-base-perl libxml-simple-perl bc x11proto-core-dev libx11-dev libgl1-mesa-dev xsltproc unzip openssl gcc-aarch64-linux-gnu binutils lld default-jdk gnupg libc6-dev libncurses-dev libreadline-dev libgl1 g++ grep tofrodos python3-markdown libtinfo6 repo cpio kmod libelf-dev pahole clang-format clang-tidy clang-tools libc++-dev libc++1 libc++abi-dev libc++abi1 libclang-dev libclang1 liblldb-dev libllvm-ocaml-dev libomp-dev libomp5 llvm-dev llvm-runtime llvm libncurses5-dev ninja-build imagemagick git-lfs libsdl1.2-dev libxml2 lzop rsync schedtool squashfs-tools adb fastboot -yy
+
+
+echo "SELESAI"
